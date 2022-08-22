@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main" id="container" style="background-color: white;">
+        <div class="content">
+            <p id="tulisan" style="color: black;">Hey you, Click this</p>
+        </div>
+        <div class="btn" >
+            <button onclick="switchy()"id="btn" style="background-color: black; color:white;">ON</button>
+        </div>
+    </div>
+    
+</body>
+<script>
+    function switchy(){
+        const warna = document.getElementById("container").style.backgroundColor;
+        const inn = document.getElementById("btn");
+        if(warna == "white"){
+            document.getElementById("container").style.backgroundColor ="black";
+            inn.innerHTML = "OFF";
+            document.getElementById("btn").style.backgroundColor = "white";
+            document.getElementById("btn").style.color = "black";
+            document.getElementById("tulisan").innerHTML = "Have a nice dream &#128521";
+            document.getElementById("tulisan").style.color = "white";
+        }
+        else{
+            document.getElementById("container").style.backgroundColor ="white";
+            inn.innerHTML = "ON";
+            document.getElementById("btn").style.backgroundColor = "black";
+            document.getElementById("btn").style.color = "white";
+            document.getElementById("tulisan").innerHTML = "Hey you, Click This";
+            document.getElementById("tulisan").style.color = "black";
+        }
+    }
+</script>
+</html>
